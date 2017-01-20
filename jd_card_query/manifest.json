@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "功夫象",
+  "version": "1.0",
+  "description": "关于JD的一些便捷操作",
+  "browser_action": {
+    "default_icon": {
+      "19": "images/logo@2x.png",
+      "38": "images/logo@2x.png"
+    },
+    "default_title": "京东宝",
+    "default_popup": "popup.html"
+  },
+  "content_scripts":[
+    {
+      "matches":["*://mygiftcard.jd.com/giftcard/index.action"],
+      "js":["js/jquery-3.1.1.min.js", "js/check_num.js", "js/js-xlsx/xlsx.full.min.js"]
+    }
+  ]
+}
