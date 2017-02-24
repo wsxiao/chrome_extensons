@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "功夫象",
+  "version": "1.0",
+  "description": "关于航班查询的一些便捷操作",
+  "browser_action": {
+    "default_icon": {
+      "19": "images/logo@2x.png",
+      "38": "images/logo@2x.png"
+    },
+    "default_title": "航班快捷",
+    "default_popup": "popup.html"
+  },
+  "content_scripts":[
+    {
+      "matches":["*://b2b.baosheng.com.cn/airsearch/international/search.htm"],
+      "js":["js/jquery-3.1.1.min.js", "js/check_num.js", "js/js-xlsx/xlsx.full.min.js"]
+    }
+  ]
+}
